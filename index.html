@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Chambers Preview | Acefields</title>
+<style>
+:root{
+  --ink:#12211C; --ink2:#1B302A; --accent:#A98B45; --accent2:#C8A961;
+  --paper:#F7F4EE; --paper2:#EFE9DD; --text:#242420; --muted:#6B6A64; --line:rgba(169,139,69,.3);
+  --serif:Georgia,'Times New Roman',serif;
+  --sans:'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;
+}
+.scheme-navy{--ink:#0E2233;--ink2:#16324A;--accent:#BC6C25;--accent2:#D98A3D;--paper:#FBFAF7;--paper2:#F2EEE7;--text:#20272C;--muted:#66707A;--line:rgba(188,108,37,.28)}
+.scheme-forest{--ink:#0B1F1B;--ink2:#123029;--accent:#1F7A5C;--accent2:#4FD1A5;--paper:#F6F3EC;--paper2:#ECE6D9;--text:#1D2622;--muted:#68736D;--line:rgba(79,209,165,.3)}
+.scheme-burgundy{--ink:#3B1220;--ink2:#4E1929;--accent:#C8A24A;--accent2:#E0C07E;--paper:#F7F2E8;--paper2:#EFE7D8;--text:#2B2622;--muted:#6E675F;--line:rgba(200,162,74,.32)}
+.scheme-plum{--ink:#2E1A33;--ink2:#452747;--accent:#C9A227;--accent2:#E3C55E;--paper:#FAF7F2;--paper2:#F1EAE2;--text:#241E26;--muted:#6E6672;--line:rgba(201,162,39,.3)}
+.scheme-indigo{--ink:#101A3A;--ink2:#18244C;--accent:#C8A34A;--accent2:#E2C57A;--paper:#F7F4EC;--paper2:#EDE7D8;--text:#1B1B24;--muted:#6A6B7A;--line:rgba(200,163,74,.3)}
+.scheme-charcoal{--ink:#11161C;--ink2:#1B232C;--accent:#B5542D;--accent2:#D97742;--paper:#F7F5F0;--paper2:#EDE8DF;--text:#1E242B;--muted:#6B7280;--line:rgba(181,84,45,.28)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--text);font-family:var(--sans);font-size:16.5px;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1130px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;z-index:60;background:var(--ink);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:74px}
+.brand{display:flex;align-items:center;gap:12px}
+.mark{width:44px;height:44px;border:1px solid var(--accent2);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:15px;color:var(--accent2);flex:0 0 auto}
+.brand-text strong{display:block;font-family:var(--serif);font-weight:400;font-size:17px;color:#FBF8F2;line-height:1.2}
+.brand-text span{display:block;font-size:8.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent2);margin-top:3px}
+nav.links{display:flex;gap:20px}
+nav.links a{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#D5D3CC;padding-bottom:2px;border-bottom:1px solid transparent}
+nav.links a:hover{color:var(--accent2);border-color:var(--accent2)}
+.nav-cta{background:var(--accent);color:#fff;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;padding:11px 16px;white-space:nowrap}
+.hero{background:var(--ink);color:#E7E3D8;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(760px 400px at 84% 4%,color-mix(in srgb, var(--accent) 30%, transparent),transparent 66%)}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.12fr .88fr;gap:46px;align-items:center;padding-top:68px;padding-bottom:70px}
+.eyebrow{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--accent2);margin-bottom:18px;font-weight:700}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(1.95rem,4.6vw,3.2rem);line-height:1.14;color:#FCFAF5;max-width:19ch}
+h1 em{font-style:italic;color:var(--accent2)}
+.hero .lede{margin-top:20px;max-width:52ch;color:#C6C3B9;font-size:1rem}
+.hero-actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;font-size:11px;letter-spacing:.13em;text-transform:uppercase;font-weight:800;padding:14px 22px;cursor:pointer;border:1px solid transparent;font-family:var(--sans)}
+.btn.solid{background:var(--accent);color:#fff}
+.btn.wa{background:#128C7E;color:#fff}
+.btn.line{border-color:color-mix(in srgb, var(--accent2) 65%, transparent);color:#EFE6D6;background:transparent}
+.card{background:rgba(255,255,255,.05);border:1px solid var(--line);padding:22px}
+.card .lbl{font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent2);margin-bottom:10px}
+.card .tel{font-family:var(--serif);font-size:1.42rem;color:#FCFAF5}
+.card .addr{font-size:.88rem;color:#BCBAB2;margin-top:12px;line-height:1.65}
+.card .btn{width:100%;text-align:center;margin-top:16px}
+section{padding:70px 0}
+.sec-label{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;font-weight:800}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.45rem,2.9vw,2.1rem);line-height:1.22;color:var(--ink);max-width:27ch}
+h2 em{font-style:italic;color:var(--accent)}
+.lead-text{margin-top:12px;max-width:64ch;color:#4E5257}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:16px;margin-top:32px}
+.pc{background:#fff;border:1px solid var(--line);padding:22px 20px;border-left:3px solid var(--accent)}
+.pc .n{font-family:var(--serif);font-size:11px;color:var(--accent);letter-spacing:.14em;display:block;margin-bottom:8px}
+.pc h3{font-family:var(--serif);font-weight:400;font-size:1.06rem;color:var(--ink);margin-bottom:5px}
+.pc p{font-size:.85rem;color:var(--muted);line-height:1.6}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.plist{margin-top:20px;display:grid;gap:13px}
+.plist div{display:flex;gap:12px;font-size:.92rem;color:#4E5257}
+.plist b{color:var(--accent)}
+.panel{background:var(--ink);color:#DDE0DA;padding:30px 26px}
+.panel h3{font-family:var(--serif);font-weight:400;font-size:1.16rem;color:#FBF8F2;margin-bottom:8px}
+.panel p{font-size:.9rem;color:#BFBDB4;line-height:1.7}
+.steps{background:var(--paper2)}
+.sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px;margin-top:28px}
+.step{border-top:2px solid var(--accent);padding-top:12px}
+.step span{display:block;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;font-weight:800}
+.step strong{display:block;font-family:var(--serif);font-size:.98rem;color:var(--ink);font-weight:400;margin-bottom:3px}
+.step p{font-size:.84rem;color:var(--muted);line-height:1.6}
+.contact{background:var(--paper2)}
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:28px;align-items:start}
+.ci{border-top:1px solid var(--line);padding-top:13px;margin-bottom:18px}
+.ci h4{font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;font-weight:800}
+.ci p,.ci a{font-family:var(--serif);font-size:1.08rem;color:var(--ink);line-height:1.5}
+.ci.small p{font-family:var(--sans);font-size:.85rem;color:#5F6367;line-height:1.7}
+.form-box{background:#fff;border:1px solid var(--line);padding:24px 22px}
+.form-box h3{font-family:var(--serif);font-weight:400;font-size:1.14rem;color:var(--ink);margin-bottom:4px}
+.form-box p.hint{font-size:.8rem;color:var(--muted);margin-bottom:14px;line-height:1.6}
+label{display:block;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:12px 0 5px;font-weight:800}
+input,textarea{width:100%;padding:11px 12px;border:1px solid var(--line);background:var(--paper);font-family:var(--sans);font-size:.9rem;color:var(--text);outline:none}
+input:focus,textarea:focus{border-color:var(--accent)}
+textarea{min-height:88px;resize:vertical}
+.form-note{font-size:11px;color:var(--muted);margin-top:10px;line-height:1.6}
+footer{background:var(--ink);color:#A8A69D;padding:40px 0 30px;border-top:3px solid var(--accent)}
+.ftop{display:flex;justify-content:space-between;gap:22px;flex-wrap:wrap;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.fbrand{font-family:var(--serif);font-size:1.05rem;color:#F8F5EE;margin-bottom:5px}
+.ftop p{font-size:.83rem;max-width:48ch;line-height:1.65}
+.fbot{padding-top:16px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.74rem;color:#8B8981}
+.mbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:70;background:#fff;border-top:1px solid var(--line)}
+.mbar a{flex:1;text-align:center;padding:14px 8px;font-size:11.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.mbar .c1{background:var(--ink);color:#F7F4EE}
+.mbar .c2{background:#128C7E;color:#fff}
+.makerbar{background:#0B121D;color:#94A3B8;font-size:11.5px;text-align:center;padding:8px 12px;letter-spacing:.02em}
+.makerbar b{color:#FCD34D}
+@media(max-width:960px){
+  nav.links,.nav-cta{display:none}
+  .hero .wrap,.split,.cg{grid-template-columns:1fr;gap:26px}
+  section{padding:52px 0}
+  .hero .wrap{padding-top:42px;padding-bottom:46px}
+  .mbar{display:flex}
+  body{padding-bottom:54px}
+}
+</style>
+</head>
+<body>
+
+<div class="makerbar" id="maker">Acefields preview &middot; <b id="makerFirm">the chambers</b></div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <span class="mark" id="mark">CH</span>
+      <span class="brand-text">
+        <strong id="nameTop">The Chambers</strong>
+        <span id="cityTop">Legal Practitioners</span>
+      </span>
+    </a>
+    <nav class="links">
+      <a href="#practice">Practice</a>
+      <a href="#firm">The Firm</a>
+      <a href="#how">How We Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" id="callTop" href="#contact">Call the Chambers</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow" id="eyebrow">Legal Practitioners &middot; Nigeria</p>
+      <h1 id="h1">Counsel you can call, in the city where you <em>trade.</em></h1>
+      <p class="lede" id="lede">A chambers portal built in the firm's name: practice areas, the firm, and a direct line to counsel on WhatsApp. Everything here can be changed.</p>
+      <div class="hero-actions">
+        <a class="btn solid" href="#contact">Request a Consultation</a>
+        <a class="btn wa" id="waTop" href="#">WhatsApp the Chambers</a>
+      </div>
+    </div>
+    <div class="card">
+      <p class="lbl">Chambers</p>
+      <p class="tel" id="telBig">0800 000 0000</p>
+      <p class="addr" id="addrBig">Office address, Nigeria</p>
+      <a class="btn solid" id="callCard" href="#">Call Now</a>
+    </div>
+  </div>
+</section>
+
+<section id="practice">
+  <div class="wrap">
+    <p class="sec-label">Practice Areas</p>
+    <h2>The work the chambers <em>takes.</em></h2>
+    <p class="lead-text">Each area below is written for this firm. Tell us the real list and yours will read exactly right.</p>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section id="firm" style="background:var(--paper2)">
+  <div class="wrap split">
+    <div>
+      <p class="sec-label">The Firm</p>
+      <h2>Built on files that are <em>kept properly.</em></h2>
+      <p class="lead-text">Clients come back for two reasons: they were told the truth about their matter, and the paperwork was right the first time. That is what this page should say about the chambers.</p>
+      <div class="plist">
+        <div><b>&#9670;</b><span>One counsel, one file, from first advice to judgment</span></div>
+        <div><b>&#9670;</b><span>Documents checked before a client pays or signs</span></div>
+        <div><b>&#9670;</b><span>Scope and professional fee agreed in writing at the start</span></div>
+        <div><b>&#9670;</b><span>Plain answers, including the unwelcome ones</span></div>
+      </div>
+    </div>
+    <div class="panel">
+      <h3 id="panelTitle">Speak to counsel today</h3>
+      <p id="panelText">This enquiry form and every WhatsApp button on this page are already wired to the chambers' own number. A client taps once and the message is written for them.</p>
+      <div style="margin-top:16px"><a class="btn wa" id="waPanel" href="#">WhatsApp the chambers</a></div>
+    </div>
+  </div>
+</section>
+
+<div class="steps">
+  <div class="wrap">
+    <p class="sec-label">How a Matter Runs</p>
+    <h2>Four steps, <em>no mystery.</em></h2>
+    <div class="sg">
+      <div class="step"><span>Step 01</span><strong>Enquiry</strong><p>Call, WhatsApp or walk in. Say what happened and what you want protected.</p></div>
+      <div class="step"><span>Step 02</span><strong>Conflict check</strong><p>The firm confirms it can act before any confidential detail is taken.</p></div>
+      <div class="step"><span>Step 03</span><strong>Instructions &amp; fee</strong><p>Scope, fee and timeline agreed in writing before work begins.</p></div>
+      <div class="step"><span>Step 04</span><strong>Action</strong><p>Filing, correspondence, negotiation or advocacy, with the client kept informed.</p></div>
+    </div>
+  </div>
+</div>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="sec-label">Contact</p>
+    <h2>Speak to the <em>chambers.</em></h2>
+    <div class="cg">
+      <div>
+        <div class="ci"><h4>Telephone</h4><p><a id="telLink" href="#">0800 000 0000</a></p></div>
+        <div class="ci"><h4>WhatsApp</h4><p><a id="waLink" href="#">Message the chambers</a></p></div>
+        <div class="ci"><h4>Office</h4><p id="addrContact">Office address</p></div>
+        <div class="ci small"><h4>Please note</h4><p>Sending an enquiry does not create a solicitor and client relationship. Please do not send confidential documents until the chambers confirms it can act for you.</p></div>
+      </div>
+      <div class="form-box">
+        <h3>Request a consultation</h3>
+        <p class="hint">Fill this and it opens in WhatsApp, already written, so the chambers receives a complete message.</p>
+        <form id="enq">
+          <label for="n">Full name</label><input id="n" required placeholder="Your full name">
+          <label for="p">Telephone</label><input id="p" type="tel" required placeholder="0803 ...">
+          <label for="a">Area of law</label><input id="a" placeholder="Land, matrimonial, company...">
+          <label for="m">Brief summary</label><textarea id="m" placeholder="A sentence or two is enough."></textarea>
+          <button class="btn solid" type="submit" style="width:100%;margin-top:16px">Send Enquiry</button>
+          <p class="form-note" id="note">Your details are handled in confidence.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="ftop">
+      <div>
+        <div class="fbrand" id="nameFoot">The Chambers</div>
+        <p id="footText">A modern chambers portal, built for law firms only.</p>
+      </div>
+      <div style="font-size:10px;letter-spacing:.14em;text-transform:uppercase" id="footLinks"></div>
+    </div>
+    <div class="fbot">
+      <span id="copyFoot">&copy; 2026</span>
+      <span>Concept preview prepared by Acefields Attorneys. Details drawn from public listings and may be corrected by the firm.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="c1" id="mCall" href="#">Call the Chambers</a>
+  <a class="c2" id="mWa" href="#">WhatsApp</a>
+</div>
+
+<script>
+(function(){
+  var q = new URLSearchParams(location.search);
+  function g(k, d){ var v = q.get(k); return (v && v.trim()) ? v.trim() : d; }
+
+  var firm = g('f', 'A Nigerian Chambers');
+  var phone = (g('p','2348000000000')).replace(/[^0-9]/g,'');
+  if(phone.indexOf('0') === 0) phone = '234' + phone.slice(1);
+  var city = g('c','Nigeria');
+  var state = g('s','');
+  var addr = g('a','');
+  var areas = (q.get('ar') || '').split(',').map(function(s){return s.trim();}).filter(Boolean);
+  var col = (q.get('col') || '').toLowerCase();
+  var schemes = ['navy','forest','burgundy','plum','indigo','charcoal'];
+  if(schemes.indexOf(col) < 0){
+    var h = 0; for(var i=0;i<firm.length;i++){ h = (h*31 + firm.charCodeAt(i)) % 997; }
+    col = schemes[h % schemes.length];
+  }
+  document.documentElement.className = 'scheme-' + col;
+
+  function pretty(p){
+    if(p.slice(0,3) === '234') p = '0' + p.slice(3);
+    if(p.length === 11) return p.slice(0,4)+' '+p.slice(4,7)+' '+p.slice(7);
+    return p;
+  }
+  var PN = pretty(phone);
+  var initials = firm.replace(/[^A-Za-z ]/g,'').split(/\s+/).filter(function(w){ return w.length>2; })
+                   .slice(0,2).map(function(w){ return w[0].toUpperCase(); }).join('') || 'CH';
+  var place = city + (state ? ', ' + state : '');
+  var waMsg = 'Good day, I found ' + firm + ' online. I would like to speak with the chambers about a matter.';
+  var waURL = 'https://wa.me/' + phone + '?text=' + encodeURIComponent(waMsg);
+
+  function set(id, val){ var el = document.getElementById(id); if(el) el.textContent = val; }
+  function href(id, val){ var el = document.getElementById(id); if(el) el.setAttribute('href', val); }
+
+  document.title = firm + ' | Chambers Preview';
+  set('mark', initials);
+  set('nameTop', firm); set('nameFoot', firm); set('makerFirm', firm);
+  set('cityTop', 'Legal Practitioners' + (city ? ' · ' + city : ''));
+  set('eyebrow', 'Legal Practitioners · ' + place);
+  set('telBig', PN); set('telLink', PN);
+  set('addrBig', addr || ('Chambers, ' + place));
+  set('addrContact', addr || ('Chambers, ' + place));
+  set('copyFoot', '© 2026 ' + firm);
+  set('footText', firm + ' — legal practitioners in ' + place + '. Built as a concept preview for the chambers.');
+  set('panelTitle', 'Speak to ' + firm + ' today');
+
+  var telHref = 'tel:+' + phone;
+  ['callTop','callCard','telLink','mCall'].forEach(function(id){
+    var el = document.getElementById(id);
+    if(el) el.setAttribute('href', telHref);
+  });
+  if(document.getElementById('callTop')) document.getElementById('callTop').textContent = 'Call ' + PN;
+  if(document.getElementById('mCall')) document.getElementById('mCall').textContent = 'Call ' + PN;
+  ['waTop','waLink','waPanel','mWa'].forEach(function(id){ href(id, waURL); });
+  document.getElementById('waTop').textContent = 'WhatsApp the Chambers';
+
+  var defAreas = [
+    ['Litigation','Civil and commercial claims, defences and appeals before the courts, carried through to enforcement of judgment.'],
+    ['Property & Land','Title investigation, deeds of assignment, consents and perfection, and landlord and tenant matters.'],
+    ['Corporate & Commercial','Company registration, secretarial records, contracts and advisory for businesses trading in Nigeria.'],
+    ['Family & Matrimonial','Divorce and separation, custody, maintenance and the arrangements that protect children.'],
+    ['Probate & Estates','Wills, letters of administration and the orderly transfer of property within a family.'],
+    ['Debt Recovery','Demand letters, negotiation and court action for clients owed money.']
+  ];
+  var list = areas.length ? areas.map(function(a){ return [a, 'Detailed description for ' + a.toLowerCase() + ' as practised by the chambers.']; }) : defAreas;
+  document.getElementById('grid').innerHTML = list.map(function(a,i){
+    return '<div class="pc"><span class="n">0'+(i+1)+'</span><h3>'+a[0]+'</h3><p>'+a[1]+'</p></div>';
+  }).join('');
+
+  document.getElementById('footLinks').innerHTML =
+    '<a href="#practice">Practice</a> &nbsp;·&nbsp; <a href="#contact">Contact</a> &nbsp;·&nbsp; <a href="'+telHref+'">'+PN+'</a>';
+
+  var f = document.getElementById('enq');
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('n').value.trim();
+    var tel = document.getElementById('p').value.trim();
+    var area = document.getElementById('a').value.trim();
+    var msg = document.getElementById('m').value.trim();
+    var note = document.getElementById('note');
+    if(!name || !tel){ note.textContent = 'Please add your name and telephone number.'; return; }
+    var body = 'Good day, my name is ' + name + '. My telephone number is ' + tel + '.'
+      + (area ? ' Area of law: ' + area + '.' : '') + (msg ? ' ' + msg : '');
+    note.textContent = 'Opening WhatsApp with your enquiry...';
+    window.open('https://wa.me/' + phone + '?text=' + encodeURIComponent(body), '_blank');
+  });
+
+  document.querySelectorAll('nav.links a, .f a').forEach(function(a){});
+})();
+</script>
+</body>
+</html>
